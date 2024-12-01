@@ -487,3 +487,90 @@
 # country_capitals = {"England": "London", "Italy": "Rome"}
 # # get dictionary's length
 # print(len(country_capitals))   # Output: 2
+
+
+# Example:            ************* Python Functions *************
+
+
+# def greet(name):
+#     print("Hello", name)
+# # pass argument
+# greet("John")
+
+
+# def mul(num):
+#     res=num*num
+#     return res
+# print(mul(3))
+
+
+
+# def add_numbers( a = 7,  b = 8):
+#     sum = a + b
+#     print('Sum:', sum)
+# # function call with two arguments
+# add_numbers(2, 3)
+# #  function call with one argument
+# add_numbers(b = 2)
+# # function call with no arguments
+# add_numbers()
+
+
+
+# program to find sum of multiple numbers 
+# def find_sum(*numbers):
+#     result = 0
+#     for num in numbers:
+#         result = result + num
+#     print("Sum = ", result)
+# # function call with 3 arguments
+# find_sum(1, 2, 3)
+# # function call with 2 arguments
+# find_sum(4, 9)
+
+
+# # declare global variable
+# message = 'Hello'
+# def greet():
+#     # declare local variable
+#     print('Local', message)
+# greet()
+# print('Global', message)
+
+
+
+# outside function 
+# def outer():
+#     message = 'local'
+#     # nested function  
+#     def inner():
+#         # declare nonlocal variable
+#         nonlocal message
+#         message = 'nonlocal'
+#         print("inner:", message)
+#     inner()
+#     print("outer:", message)
+
+# outer()
+
+# # global variable
+# c = 1 
+# def add():
+#      # increment c by 2
+#     global c
+#     c =c + 2
+#     print(c)
+# add()
+
+
+# Example of a recursive function
+
+# def fact(num):
+
+#     if num==1:
+#         return 1
+#     else: 
+#      return num*fact(num-1)
+# print (fact(5))
+
+# print(__name__)
