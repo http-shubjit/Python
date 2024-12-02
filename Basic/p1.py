@@ -710,3 +710,147 @@
 #         print("Eligible to Vote")    
 # except InvalidAgeException:
 #     print("Exception occurred: Invalid Age")
+
+
+#          ************      Python Classes and Objects     ************
+
+
+# # define a class
+# class Bike:
+#     name = ""
+#     gear = 0
+# # create object of class
+# bike1 = Bike()
+# # access attributes and assign new values
+# bike1.gear = 11
+# bike1.name = "Mountain Bike"
+# print(f"Name: {bike1.name}, Gears: {bike1.gear} ")
+
+
+
+# create a class
+# class Room:
+#     length = 0.0
+#     breadth = 0.0 
+#     # method to calculate area
+#     def calculate_area(self):
+#         print("Area of Room =", self.length * self.breadth)
+# # create object of Room class
+# study_room = Room()
+# # assign values to all the properties 
+# study_room.length = 42.5
+# study_room.breadth = 30.8
+# # access method inside class
+# study_room.calculate_area()
+
+
+# Constructor
+
+# class Employee:
+#     def __init__(self, name, age):
+#         self.name = name  # Initialize the name attribute
+#         self.age = age    # Initialize the age attribute
+# # Create an instance of Employee
+# employee1 = Employee("Disha", 33)
+# # Accessing attributes
+# print(employee1.name)  # Output: Disha
+# print(employee1.age)   # Output: 33
+
+
+
+# Python Inheritance
+
+# class Animal:
+#     name=""
+#     def eat(self):
+#         print("i can it")
+# class Dog(Animal):
+#     def display(self):
+#         print(self.name)
+# dog =Dog()
+# dog.name="Dog"
+# dog.eat()
+# dog.display()
+
+
+# Method Overriding in Python Inheritance
+
+# class Animal:
+#    name = ""    
+#    def eat(self):
+#         print("I can eat")
+# # inherit from Animal
+# class Dog(Animal):
+#     # override eat() method
+#     def eat(self):
+#         # call the eat() method of the superclass using super()
+#         super().eat()
+#         print("I like to eat bones")
+# # create an object of the subclass
+# labrador = Dog()
+# labrador.eat()
+
+
+# Python Multilevel Inheritance
+
+
+# class SuperClass:
+#     def super_method(self):
+#         print("Super Class method called")
+# # define class that derive from SuperClass
+# class DerivedClass1(SuperClass):
+#     def derived1_method(self):
+#         print("Derived class 1 method called")
+# # define class that derive from DerivedClass1
+# class DerivedClass2(DerivedClass1):
+#     def derived2_method(self):
+#         print("Derived class 2 method called")
+# # create an object of DerivedClass2
+# d2 = DerivedClass2()
+# d2.super_method()  # Output: "Super Class method called"
+# d2.derived1_method()  # Output: "Derived class 1 method called"
+# d2.derived2_method()  # Output: "Derived class 2 method called"
+
+
+#          Method Resolution Order (MRO) in Python
+
+# class SuperClass1:
+#     def info(self):
+#         print("Super Class 1 method called")
+# class SuperClass2:
+#     def info(self):
+#         print("Super Class 2 method called")
+# class Derived(SuperClass1, SuperClass2):
+#     pass
+# d1 = Derived()
+# d1.info()  
+# # Output: "Super Class 1 method called"
+
+
+
+#         Method Overriding
+
+# from math import pi
+# class Square(Shape):
+#     def __init__(self, length):
+#         self.length = length
+
+#     def area(self):
+#         return self.length**2
+
+#     def fact(self):
+#         return "Squares have each angle equal to 90 degrees."
+# class Circle(Shape):
+#     def __init__(self, radius):
+#         self.radius = radius
+#     def area(self):
+#         return pi*self.radius**2
+#     def fact(self):
+#         return "Circle have each angle equal to 360 degrees."
+
+# a = Square(4)
+# b = Circle(7)
+# print(b.area())
+# print(b.fact())
+# print(a.fact())
+# print(b.area())
