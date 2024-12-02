@@ -574,3 +574,139 @@
 # print (fact(5))
 
 # print(__name__)
+
+
+
+#                         *********        Python Files         *********
+
+# Get Current Directory in Python
+
+# import os;
+# print(os.getcwd())
+# print(os.listdir())
+
+# os.mkdir('test')
+# os.listdir()
+# ['test']
+
+
+# os.listdir()
+# ['test']
+# # rename a directory
+# os.rename('test','new_one')
+# os.listdir()
+# ['new_one']
+
+# import shutil
+# # delete "mydir" directory and all of its contents
+# shutil.rmtree("test")
+
+
+#                   Python CSV: Read and Write CSV Files
+
+# read
+
+# import csv
+# with open('people.csv', 'r') as file:
+#     reader = csv.reader(file)
+#     for row in reader:
+#         print(row)
+
+# write
+
+# import csv
+# with open('innovators.csv', 'w', newline='') as file:
+#     writer = csv.writer(file)
+#     writer.writerow(["SN", "Name", "Contribution"])
+#     writer.writerow([1, "Linus Torvalds", "Linux Kernel"])
+#     writer.writerow([2, "Tim Berners-Lee", "World Wide Web"])
+#     writer.writerow([3, "Guido van Rossum", "Python Programming"])
+
+# with open('innovators.csv', 'r') as file:
+#     reader = csv.reader(file)
+#     for row in reader:
+#         print(row)
+
+
+
+#           ***********  Python Exceptions    ***********
+
+
+# numerator = 10
+# denominator = 0
+# result = numerator/denominator
+# print(result)
+
+
+# print(dir(locals()['__builtins__']))
+
+
+# 1:       Python try...except Block
+
+
+# try:
+#     numerator = 10
+#     denominator = 0
+#     result = numerator/denominator
+#     print(result)
+# except:
+#     print("Error: Denominator cannot be 0.")
+
+
+# 2:       Catching Specific Exceptions in Python
+
+# try:
+#     even_numbers = [2,4,6,8]
+#     print(even_numbers[5])
+# except ZeroDivisionError:
+#     print("Denominator cannot be 0.") 
+# except IndexError:
+#     print("Index Out of Bound.")
+# # Output: Index Out of Bound
+
+
+
+#       Python try with else clause
+# program to print the reciprocal of even numbers
+# try:
+#     num = int(input("Enter a number: "))
+#     assert num % 2 == 0
+# except:
+#     print("Not an even number!")
+# else:
+#     reciprocal = 1/num
+#     print(reciprocal)
+
+
+#         Python try...finally
+
+# try:
+#     numerator = 10
+#     denominator = 0
+#     result = numerator/denominator
+#     print(result)
+# except:
+#     print("Error: Denominator cannot be 0.")
+# finally:
+#     print("This is finally block.")
+
+
+
+#               user-defined exceptions
+
+
+
+# # define Python user-defined exceptions
+# class InvalidAgeException(Exception):
+#     "Raised when the input value is less than 18"
+#     pass
+# # you need to guess this number
+# number = 18
+# try:
+#     input_num = int(input("Enter a number: "))
+#     if input_num < number:
+#         raise InvalidAgeException
+#     else:
+#         print("Eligible to Vote")    
+# except InvalidAgeException:
+#     print("Exception occurred: Invalid Age")
